@@ -20,7 +20,10 @@ var commentRoutes    = require("./routes/comments"),
 app.locals.moment = require('moment');
 
 // connect to  database
-var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v10";
+// var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v10";
+
+ var url = process.env.DATABASEURL || "mongodb://charles:london@ds143081.mlab.com:43081/campfire";
+
 mongoose.connect(url);
 
 app.use(bodyParser.urlencoded({extended: true}));
